@@ -22,3 +22,11 @@ Learn more DHT protocol
 	- 停止爬虫
 - python mdht.py test
 	- 测试
+
+### 相关学习资料
+   [小虾](http://xiaoxia.org/2013/05/11/magnet-search-engine/)
+   [Kevin Lynx]http://codemacro.com/2013/05/19/crawl-dht/
+   [zxx](http://blog.csdn.net/xxxxxx91116/article/details/7971134)
+   [mergerly](http://blog.csdn.net/mergerly/article/details/7989281)
+
+
