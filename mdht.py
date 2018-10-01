@@ -27,7 +27,7 @@ BOOTSTRAP_NODES = [
 ]
 TID_LENGTH = 4
 KRPC_TIMEOUT = 1
-MAX_NODE_QSIZE = 1000
+MAX_NODE_QSIZE = 10000
 DHT_PORT = 6881
 DHT_PID_NAME = "mdht.pid"
 
@@ -142,9 +142,11 @@ class mdht():
     
     """ 接受到peer的请求 """
     def get_peers_received(self, msg, address):
+
         try:
+            self.send_krpc(msg, address)
             infohash = msg["a"]["info_hash"]
-            self.mlog.record(infohash)
+            self.mlog.record(address, infohash)
         except Exception, e:
             pass
 
